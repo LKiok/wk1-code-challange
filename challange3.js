@@ -92,7 +92,7 @@ function netPay(){
     }else if (taxable >= 100000){
         let NHIFDeductions = 1700;
         document.writeln(taxable - NHIFDeductions);
-    }//calculates the money left after NHIF deductions in each range of income.
+    }//calculates the money left after NHIF deductions in each range of
      
     let pension;
     let Tier = parseInt(prompt("choose you Tier \n 1;Tier 1 \n 2;Tier 2"))//allows choosing of ties.
