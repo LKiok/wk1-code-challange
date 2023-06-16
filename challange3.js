@@ -1,5 +1,5 @@
 function netPay(){
-    var taxable = parseInt(prompt("enter income"));
+    var taxable = parseInt(prompt("enter income"));//allows for input of income.
     let rate ;
     
     if (taxable <= 24000) {
@@ -11,31 +11,31 @@ function netPay(){
     }else if (taxable > 32333){
         let rate = 0.3;
         document.writeln(taxable*rate);
-    }
+    }//shows the amount of money taken as paye.
 
     let benefits;
-    let loan = parseInt(prompt("enter \n 1;No loan \n 2;Taken loan"));
+    let loan = parseInt(prompt("enter \n 1;No loan \n 2;Taken loan"));//alows a person to choose whether they have taken a loan or not.
 
     if (loan === 1){
         benefits = 0;
         if (benefits = 0){
             document.writeln(0)
-        }
+        }//shows they have no Fringe benefit tax if they have not taken a loan.
     }
-    let months = parseInt(prompt("enter range of months \n 1;January to March \n 2;April to June \n 3;July to September \n 4;October to December"));
+    let months = parseInt(prompt("enter range of months \n 1;January to March \n 2;April to June \n 3;July to September \n 4;October to December"));//allows for choosing the range of months
     if (loan === 2){
        if (months = 1){
         benefits = taxable*0.07;
-        document.writeln(taxable*0.07);
+        document.writeln(taxable*0.07);//calculates Fringe benefit tax for the first range of months.
        } else if (months = 2){
         benefits = taxable*0.07;
-        document.writeln(taxable*0.07)
+        document.writeln(taxable*0.07)//calculates Fringe benefit tax for the second range of months.
        }else if (months = 3){
         benefits = taxable*0.08;
-        document.writeln(taxable*0.08);
+        document.writeln(taxable*0.08);//calculates Fringe benefit tax for the third range of months.
        }else if (months = 4){
         benefits = taxable*0.09;
-        document.writeln(taxable*0.09);
+        document.writeln(taxable*0.09);//calculates Fringe benefit tax for the fourth range of months.
        }
     }
 
@@ -92,10 +92,10 @@ function netPay(){
     }else if (taxable >= 100000){
         let NHIFDeductions = 1700;
         document.writeln(taxable - NHIFDeductions);
-    }
+    }//calculates the money left after NHIF deductions in each range of income.
      
     let pension;
-    let Tier = parseInt(prompt("choose you Tier \n 1;Tier 1 \n 2;Tier 2"))
+    let Tier = parseInt(prompt("choose you Tier \n 1;Tier 1 \n 2;Tier 2"))//allows choosing of ties.
      
     if (Tier === 1){
          pension = taxable*0.06;
@@ -104,7 +104,7 @@ function netPay(){
         }else {
             pension = 360;
             document.writeln(pension)
-        }
+        }//calculates the pension for tier 1.
     }
     else if (Tier === 2){
         pension = taxable*0.06;
@@ -113,8 +113,8 @@ function netPay(){
         }else {
             pension = 1080;
             document.writeln(pension);
-        }
+        }//calculates the pension for tier 2.
     } 
      
 }
-netPay();
+netPay();//calls the function allowing to run.
